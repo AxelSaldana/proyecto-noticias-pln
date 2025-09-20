@@ -1,166 +1,166 @@
-# 📰 Proyecto PLN - Procesamiento de Lenguaje Natural en Noticias
+# 📰 News NLP Processor - Natural Language Processing for News Articles
 
-## 🎓 Información Académica
+## 🎓 Academic Information
 
-**Universidad:** Universidad Politécnica de San Luis Potosí  
-**Materia:** Inteligencia Artificial 2  
-**Profesor:** Manuel Chávez Pérez  
+**University:** Universidad Politécnica de San Luis Potosí  
+**Course:** Artificial Intelligence 2  
+**Professor:** Manuel Chávez Pérez  
 
-### 👥 Equipo de Desarrollo
+### 👥 Development Team
 - **Emiliano Chequer Enriquez** - 180016
 - **Jorge Matadamas Cortes** - 180789  
 - **Axel Rivera Saldaña** - 180606
 
-## 📋 Descripción del Proyecto
+## 📋 Project Description
 
-Este proyecto implementa un sistema de **Procesamiento de Lenguaje Natural (PLN)** para extraer, analizar y procesar noticias del sitio web [El Pulso SLP](https://pulsoslp.com.mx/). El sistema permite:
+This project implements a **Natural Language Processing (NLP)** system to extract, analyze, and process news articles from the [El Pulso SLP](https://pulsoslp.com.mx/) website. The system provides:
 
-- ✅ Extracción automática de noticias y títulos
-- ✅ Procesamiento de texto con tokenización y stemming
-- ✅ Búsqueda de palabras clave en las noticias
-- ✅ Análisis de relevancia usando TF-IDF
-- ✅ Generación de índices de palabras
-- ✅ Almacenamiento de noticias en archivos de texto
+- ✅ Automatic news and title extraction
+- ✅ Text processing with tokenization and stemming
+- ✅ Keyword search in news articles
+- ✅ Relevance analysis using TF-IDF
+- ✅ Word index generation
+- ✅ News storage in text files
 
-## 🛠️ Tecnologías Utilizadas
+## 🛠️ Technologies Used
 
 - **Python 3.8+**
 - **BeautifulSoup4** - Web scraping
-- **Requests** - Peticiones HTTP
-- **NLTK** - Procesamiento de lenguaje natural
-- **Pandas** - Manipulación de datos
-- **NumPy** - Operaciones numéricas
-- **Scikit-learn** - Machine learning y TF-IDF
-- **Sentence-splitter** - Segmentación de oraciones
+- **Requests** - HTTP requests
+- **NLTK** - Natural language processing
+- **Pandas** - Data manipulation
+- **NumPy** - Numerical operations
+- **Scikit-learn** - Machine learning and TF-IDF
+- **Sentence-splitter** - Sentence segmentation
 
-## 📦 Instalación
+## 📦 Installation
 
-### 1. Clonar el repositorio
+### 1. Clone the repository
 ```bash
-git clone https://github.com/tu-usuario/proyecto-noticias-pln.git
-cd proyecto-noticias-pln
+git clone https://github.com/AxelSaldana/news-nlp-processor.git
+cd news-nlp-processor
 ```
 
-### 2. Crear entorno virtual (recomendado)
+### 2. Create virtual environment (recommended)
 ```bash
 python -m venv venv
-source venv/bin/activate  # En Windows: venv\Scripts\activate
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-### 3. Instalar dependencias
+### 3. Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Descargar recursos de NLTK
+### 4. Download NLTK resources
 ```python
 import nltk
 nltk.download('punkt')
 ```
 
-## 🚀 Uso del Sistema
+## 🚀 System Usage
 
-### Ejecución Principal
+### Main Execution
 ```bash
 python procesador_noticias.py
 ```
 
-### Uso Programático
+### Programmatic Usage
 ```python
 from procesador_noticias import ProcesadorNoticias
 
-# Crear instancia del procesador
+# Create processor instance
 procesador = ProcesadorNoticias()
 
-# Obtener noticias
+# Get news
 procesador.obtener_noticias()
 procesador.extraer_contenido_noticias()
 
-# Guardar en archivos
+# Save to files
 procesador.guardar_noticias_txt()
 
-# Crear índice para búsquedas
+# Create index for searches
 procesador.crear_indice()
 
-# Buscar palabra específica
+# Search for specific word
 procesador.buscar_palabra("política")
 
-# Análisis de relevancia
+# Relevance analysis
 procesador.analizar_relevancia_tfidf("economía", top_n=5)
 ```
 
-## 📁 Estructura del Proyecto
+## 📁 Project Structure
 
 ```
-proyecto-noticias-pln/
-├── README.md                           # Este archivo
-├── requirements.txt                    # Dependencias del proyecto
-├── procesador_noticias.py             # Código principal limpio y organizado
-├── main.py                            # Código original del notebook
-├── ProyectoFinalNoticias.ipynb        # Notebook original de Colab
-└── noticias/                          # Directorio donde se guardan las noticias
+news-nlp-processor/
+├── README.md                           # This file
+├── requirements.txt                    # Project dependencies
+├── procesador_noticias.py             # Main clean and organized code
+├── main.py                            # Original notebook code
+├── ProyectoFinalNoticias.ipynb        # Original Colab notebook
+└── noticias/                          # Directory where news are saved
     ├── noticia1.txt
     ├── noticia2.txt
     └── ...
 ```
 
-## 🔍 Funcionalidades Principales
+## 🔍 Main Features
 
-### 1. Extracción de Noticias
-- Conexión automática al sitio web de El Pulso SLP
-- Extracción de títulos y enlaces de noticias
-- Descarga del contenido completo de cada noticia
+### 1. News Extraction
+- Automatic connection to El Pulso SLP website
+- Extraction of news titles and links
+- Download of complete content for each news article
 
-### 2. Procesamiento de Texto
-- **Tokenización:** Separación del texto en palabras individuales
-- **Limpieza:** Eliminación de signos de puntuación
-- **Normalización:** Conversión a minúsculas
-- **Stemming:** Reducción de palabras a su raíz
+### 2. Text Processing
+- **Tokenization:** Text separation into individual words
+- **Cleaning:** Removal of punctuation marks
+- **Normalization:** Conversion to lowercase
+- **Stemming:** Word reduction to their root form
 
-### 3. Sistema de Búsqueda
-- Creación de índice invertido para búsquedas rápidas
-- Búsqueda de palabras clave en todas las noticias
-- Identificación de archivos que contienen términos específicos
+### 3. Search System
+- Creation of inverted index for fast searches
+- Keyword search across all news articles
+- Identification of files containing specific terms
 
-### 4. Análisis TF-IDF
-- Cálculo de relevancia de términos por documento
-- Ranking de noticias más relevantes para una palabra clave
-- Análisis estadístico de frecuencia de términos
+### 4. TF-IDF Analysis
+- Calculation of term relevance per document
+- Ranking of most relevant news for a keyword
+- Statistical analysis of term frequency
 
-## 📊 Ejemplo de Salida
+## 📊 Example Output
 
 ```
-=== NOTICIAS EXTRAÍDAS ===
-1. Gobierno de SLP anuncia nuevas medidas económicas
-2. Universidad Politécnica inaugura nuevo laboratorio
-3. Sector turístico muestra signos de recuperación
+=== EXTRACTED NEWS ===
+1. SLP Government announces new economic measures
+2. Polytechnic University inaugurates new laboratory
+3. Tourism sector shows signs of recovery
 ...
 
-=== BÚSQUEDA DE PALABRAS ===
-Ingresa una palabra para buscar: universidad
+=== WORD SEARCH ===
+Enter a word to search: university
 
-La palabra 'universidad' se encontró en:
+The word 'university' was found in:
   - Universidad_Politecnica_inaugura_nuevo_laboratorio_2.txt
   - Convenio_educativo_universidades_5.txt
 
-TOP 5 archivos más relevantes para 'universidad':
+TOP 5 most relevant files for 'university':
 1. Universidad_Politecnica_inaugura_nuevo_laboratorio_2 (Score: 0.8542)
 2. Convenio_educativo_universidades_5 (Score: 0.6234)
 ...
 ```
 
-## 🤝 Contribuciones
+## 🤝 Contributions
 
-Este proyecto fue desarrollado como parte del curso de Inteligencia Artificial 2. Las contribuciones están limitadas a los miembros del equipo de desarrollo.
+This project was developed as part of the Artificial Intelligence 2 course. Contributions are limited to the development team members.
 
-## 📄 Licencia
+## 📄 License
 
-Este proyecto es de uso académico y está desarrollado con fines educativos para la Universidad Politécnica de San Luis Potosí.
+This project is for academic use and developed for educational purposes at Universidad Politécnica de San Luis Potosí.
 
-## 📞 Contacto
+## 📞 Contact
 
-Para preguntas sobre este proyecto, contactar a cualquiera de los miembros del equipo de desarrollo mencionados anteriormente.
+For questions about this project, contact any of the development team members mentioned above.
 
 ---
 
-**Nota:** Este proyecto utiliza web scraping del sitio El Pulso SLP con fines académicos y de investigación. Se respetan los términos de uso del sitio web.
+**Note:** This project uses web scraping from El Pulso SLP website for academic and research purposes. The website's terms of use are respected.
